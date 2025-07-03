@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  overflow-x: auto; 
+  }
+  
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 80PX;
+    
+  }
+  .logo img{
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    color: white;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+  
+   background: #878383;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .ad {
+    color: white;
+    font-size: 27px;
+    text-shadow: 3px 3px 5px hsla(300, 22%, 4%, 0.945);
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white ;
+    font-weight: bold;
+    padding: 6px 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: black;
+    text-decoration: underline;
+    font-size: 1.4em;
+  }
+  
+  #search {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #lo{
+    width: 200px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+ .button {
+  background-color: white;
+  color: #C62828;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.button:hover {
+  color: black;
+  font-size: 1.2em;
+  background-color: #f0f0f0; /* Optional for better effect */
+}
+
+
+    
+#myform {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  border: 2px solid #ff4d4d; /* lighter red border */
+  border-radius: 8px;
+
+  /* blood donation background image just for form */
+  background: 
+    url('photos/creative-professional-design-blood-drop-600nw-1969536496.webp') no-repeat center center;
+  background-size: cover;
+
+  /* add a subtle white overlay for readability */
+  position: relative;
+  color: #660000; /* dark red text */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 15px rgba(198, 40, 40, 0.7);
+  overflow: hidden;
+}
+
+/* Overlay inside the form for better contrast */
+#myform::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+  border-radius: 8px;
+}
+
+/* Put all form content above the overlay */
+#myform > * {
+  position: relative;
+  z-index: 1;
+}
+
+#myform h2 {
+  text-align: center;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+#myform h4 {
+  color: #a80000;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #a80000;
+  padding-bottom: 6px;
+}
+
+#myform label {
+  color: #550000;
+}
+
+#myform input[type="text"],
+#myform input[type="email"],
+#myform select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 18px;
+  border: 1.5px solid #cc3333;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #330000;
+  transition: border-color 0.3s ease;
+}
+
+#myform input[type="text"]:focus,
+#myform input[type="email"]:focus,
+#myform select:focus {
+  border-color: #df6262;
+}
+
+#myform .gender label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
+  color: #5c0b0b;
+  cursor: pointer;
+}
+
+#myform input[type="radio"] {
+  margin-right: 6px;
+}
+
+#myform button[type="submit"],
+#myform button[type="reset"] {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#myform button[type="submit"]:hover,
+#myform button[type="reset"]:hover {
+  background-color: #800000;
+}
+
+.dark-mode{
+  background-color:black;
+  color:white;
+
+}
+
