@@ -9,58 +9,6 @@
   overflow-x: auto; 
   }
   
-  .logo{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 80PX;
-    
-  }
-  .logo img{
-    max-height: 200px;
-    width: auto;
-    height: auto;
-    color: white;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-  
-   background: #878383;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .ad {
-    color: white;
-    font-size: 27px;
-    text-shadow: 3px 3px 5px hsla(300, 22%, 4%, 0.945);
-    font-family: 'Bebas Neue', sans-serif;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: white ;
-    font-weight: bold;
-    padding: 6px 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav a:hover {
-    color: black;
-    text-decoration: underline;
-    font-size: 1.4em;
-  }
   
   #search {
     padding: 6px 10px;
@@ -92,29 +40,263 @@
 }
 
 
-    
-#myform {
-  max-width: 400px;
+.dark-mode{
+  background-color:black;
+  color:white;
+
+}
+
+:root {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --accent-color: #d32f2f;
+      --button-bg: #d32f2f;
+      --button-text: #ffffff;
+      --section-bg: #f8f8f8;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --accent-color: #e53935;
+      --button-bg: #e53935;
+      --button-text: #ffffff;
+      --section-bg: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--accent-color);
+      color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+
+    .logo h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .donate-button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .donate-button:hover {
+      background-color: #b71c1c;
+    }
+
+    #darkmode-toggle {
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #darkmode-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .hero-image img {
+      max-width: 300px;
+      width: 100%;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .cta-button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #b71c1c;
+    }
+
+    .info-text {
+      margin-top: 1rem;
+      font-style: italic;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+
+    /* Section */
+    section {
+      padding: 3rem 1rem;
+      /* background-color: var(--section-bg); */
+      max-width: 1000px;
+      margin: 2rem auto;
+      border-radius: 8px;
+    }
+
+    section h3 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* How It Works */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .step {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .step-icon {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .steps {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      background-color: var(--bg-color);
+      padding: 1rem;
+      border-left: 4px solid var(--accent-color);
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .testimonial p {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--accent-color);
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    .footer a {
+      color: #fff;
+      margin: 0 0.5rem;
+    }
+    /* Signup form main box */
+#signup-form {
+  max-width: 500px;
   margin: 40px auto;
   padding: 25px 30px;
-  border: 2px solid #ff4d4d; /* lighter red border */
+  border: 2px solid #ff4d4d;
   border-radius: 8px;
-
-  /* blood donation background image just for form */
-  background: 
-    url('photos/creative-professional-design-blood-drop-600nw-1969536496.webp') no-repeat center center;
+  background: url('photos/creative-professional-design-blood-drop-600nw-1969536496.webp') no-repeat center center;
   background-size: cover;
-
-  /* add a subtle white overlay for readability */
   position: relative;
-  color: #660000; /* dark red text */
+  color: #660000;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0 15px rgba(198, 40, 40, 0.7);
+  /* box-shadow: 0 0 15px rgba(198, 40, 40, 0.7); */
   overflow: hidden;
 }
 
-/* Overlay inside the form for better contrast */
-#myform::before {
+/* Overlay for readability */
+#signup-form::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -123,35 +305,37 @@
   border-radius: 8px;
 }
 
-/* Put all form content above the overlay */
-#myform > * {
+#signup-form > * {
   position: relative;
   z-index: 1;
 }
 
-#myform h2 {
+/* Heading */
+#signup-form h2 {
   text-align: center;
   color: #b30000;
   margin-bottom: 20px;
 }
 
-#myform h4 {
-  color: #a80000;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #a80000;
-  padding-bottom: 6px;
+/* Each form group */
+#signup-form .form-group {
+  margin-bottom: 18px;
 }
 
-#myform label {
+#signup-form label {
+  display: block;
+  margin-bottom: 6px;
   color: #550000;
+  font-weight: bold;
 }
 
-#myform input[type="text"],
-#myform input[type="email"],
-#myform select {
+/* Inputs and selects */
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="tel"],
+#signup-form select {
   width: 100%;
   padding: 8px 10px;
-  margin-bottom: 18px;
   border: 1.5px solid #cc3333;
   border-radius: 5px;
   font-size: 15px;
@@ -162,13 +346,25 @@
   transition: border-color 0.3s ease;
 }
 
-#myform input[type="text"]:focus,
-#myform input[type="email"]:focus,
-#myform select:focus {
+#signup-form input[type="text"]:focus,
+#signup-form input[type="email"]:focus,
+#signup-form input[type="tel"]:focus,
+#signup-form select:focus {
   border-color: #df6262;
 }
 
-#myform .gender label {
+/* Inline radio options */
+#signup-form .form-group input[type="radio"] {
+  margin-right: 6px;
+}
+
+#signup-form .form-group label input[type="radio"] {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Horizontal radios in one line */
+#signup-form .form-group label {
   display: inline-block;
   margin-right: 20px;
   font-weight: normal;
@@ -176,17 +372,19 @@
   cursor: pointer;
 }
 
-#myform input[type="radio"] {
-  margin-right: 6px;
+/* Form buttons */
+#signup-form .form-buttons {
+  text-align: center;
+  margin-top: 20px;
 }
 
-#myform button[type="submit"],
-#myform button[type="reset"] {
+#signup-form button[type="submit"],
+#signup-form button[type="reset"] {
   background-color: #cc0000;
   color: white;
   border: none;
-  padding: 10px 18px;
-  margin-right: 10px;
+  padding: 10px 20px;
+  margin: 0 10px;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
@@ -194,14 +392,7 @@
   transition: background-color 0.3s ease;
 }
 
-#myform button[type="submit"]:hover,
-#myform button[type="reset"]:hover {
+#signup-form button[type="submit"]:hover,
+#signup-form button[type="reset"]:hover {
   background-color: #800000;
 }
-
-.dark-mode{
-  background-color:black;
-  color:white;
-
-}
-

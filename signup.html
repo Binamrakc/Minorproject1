@@ -1,94 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hamro Blood Bank</title>
-        <link rel="icon" type="png/jng" href="photos/apple-touch-icon.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <main class="darkmode">
-       <header class="header">
-        <div class="logo" >
-             <img src="photos/ChatGPT_Image_Jun_16__2025__09_05_35_PM-removebg-preview.png" alt="logo">
-            </div>
-            <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About us</a>
-            <a href="contact.html">Our Work</a>
-            <a href="#">Why HBB?</a>
-                      <button id="darkmode">Dark</button>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamro Blood Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="photos/logo.jpg" alt="Logo">
+      <h1>Hamro Blood Bank</h1>
+    </div>
+    <nav class="nav">
+      <a href="home.html">Home</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#how">How It Works</a>
+      <a href="#testimonials">Testimonials</a>
+      <button id="darkmode-toggle">🌙 Dark Mode</button>
+      <a class="donate-button" href="signup.html">Donate or Request Blood</a>
+    </nav>
+  </header>
+  <main>
+    <section class="form-section">
+  <form id="signup-form">
+    <h2>Donate or Request Blood</h2>
+        <div class="form-group">
+          <label>Choose Option:</label>
+          <label><input type="radio" name="option" value="donate" required> Donate Blood</label>
+          <label><input type="radio" name="option" value="request" required> Request Blood</label>
+        </div>
 
+        <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+        </div>
 
-            <form action="signup.html" method="GET">
-          <input type="submit" class="button"   value="Donate or Request blood">
-            </form>
-          </nav>
-          </header>
-          <body>
-            <div id="form-container">
-        <form id="myform">
-  <h2>Sign Up Form</h2>
+        <div class="form-group">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+        </div>
 
-  <div class="detail">
-    <h4>Basic detail</h4>
+        <div class="form-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="m" required> Male</label>
+          <label><input type="radio" name="gender" value="f"> Female</label>
+          <label><input type="radio" name="gender" value="o"> Other</label>
+        </div>
 
-    <label for="firstname">Firstname:</label>
-    <input type="text" id="firstname" class="name" placeholder="Firstname">
+        <div class="form-group">
+          <label for="contact">Contact No:</label>
+          <input type="tel" id="contact" name="contact" placeholder="Contact Number" required>
+        </div>
 
-    <br>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
 
-    <label for="lastname">Lastname:</label>
-    <input type="text" id="lastname" class="name" placeholder="Lastname">
+        <div class="form-group">
+          <label for="blood">Blood Group:</label>
+          <select id="blood" name="blood" required>
+            <option value="">-- Please choose --</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
 
-    <br>
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
 
-    <label>Gender: </label>
-    <label><input type="radio" name="gender" value="m"> Male</label>
-    <label><input type="radio" name="gender" value="f"> Female</label>
-    <label><input type="radio" name="gender" value="o"> Other</label>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Hamro Blood Bank. All rights reserved.</p>
+    <p>
+      <a href="https://www.facebook.com/">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a> |
+      <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
 
-    <br><br>
-  </div>
+  <!-- JavaScript -->
+  <script>
+    // Dark mode toggle
+    const toggleButton = document.getElementById('darkmode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleButton.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+    });
 
-  <div class="con">
-    <label for="contact">Contact No:</label>
-    <input type="tel" id="contact" class="contact" placeholder="Contact Number">
+    // Form validation
+    const form = document.getElementById('signup-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    <br><br>
+      const option = document.querySelector('input[name="option"]:checked');
+      const firstname = document.getElementById('firstname').value.trim();
+      const lastname = document.getElementById('lastname').value.trim();
+      const gender = document.querySelector('input[name="gender"]:checked');
+      const contact = document.getElementById('contact').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const blood = document.getElementById('blood').value;
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" class="email" placeholder="Email">
+      if (!option || !firstname || !lastname || !gender || !contact || !email || !blood) {
+        alert("Please fill in all required fields!");
+        return;
+      }
 
-    <br><br>
-  </div>
+      if (!/^\d{7,15}$/.test(contact)) {
+        alert("Please enter a valid contact number (7-15 digits).");
+        return;
+      }
 
-  <div class="blood">
-    <label for="blood">Blood Group:</label>
-    <select id="blood" name="blood" required>
-      <option value="">-- Please choose --</option>
-      <option value="A+">A+</option>
-      <option value="A-">A-</option>
-      <option value="AB+">AB+</option>
-      <option value="AB-">AB-</option>
-      <option value="B+">B+</option>
-      <option value="B-">B-</option>
-      <option value="O+">O+</option>
-      <option value="O-">O-</option>
-    </select>
-  </div>
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
 
-  <br><br>
-
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-</form>
-</div>
-<script>
-  const button = document.getElementById("darkmode");
-  button.addEventListener('click', function toggleMode() {
-    document.body.classList.toggle("dark-mode");
-    console.log("clicked");
-  });
-</script>
+      alert("Form submitted successfully!\nThank you for helping Hamro Blood Bank.");
+      form.reset();
+    });
+  </script>
 </body>
 </html>

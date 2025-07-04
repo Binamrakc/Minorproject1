@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamro Blood Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="photos/logo.jpg" alt="Logo">
+      <h1>Hamro Blood Bank</h1>
+    </div>
+    <nav class="nav">
+      <a href="home.html">Home</a>
+      <a href="#mission">Our Mission</a>
+      <a href="#how">How It Works</a>
+      <a href="#testimonials">Testimonials</a>
+      <button id="darkmode-toggle">🌙 Dark Mode</button>
+      <a class="donate-button" href="signup.html">Donate or Request Blood</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h2>Eliminate Blood Scarcity in Nepal</h2>
+    <p>Donate your time to make an impact, your blood to save lives, or your money to create a holistic blood management cycle.</p>
+    <div class="hero-image">
+      <img src="photos/hbl.png" alt="Blood Donation">
+    </div>
+    <a class="cta-button" href="signup.html">Become a Donor Today</a>
+    <div class="info-text">
+      If 1% to 3% of a country's population donates blood, it would be sufficient for the country's needs. (Source: WHO)
+    </div>
+  </main>
+
+  <section id="mission">
+    <h3>Our Mission</h3>
+    <p>At Hamro Blood Bank, our mission is to create an efficient and transparent blood donation network in Nepal, eliminating scarcity through community action and awareness.</p>
+  </section>
+
+  <section id="how">
+    <h3>How It Works</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">🩸</div>
+        <h4>1. Sign Up</h4>
+        <p>Register as a donor or requestor to join our community.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">📅</div>
+        <h4>2. Schedule</h4>
+        <p>Choose your preferred donation time or request assistance.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">❤️</div>
+        <h4>3. Save Lives</h4>
+        <p>Donate blood and help save lives in your community.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h3>What Donors Say</h3>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Donating through HBB was easy and rewarding. I feel proud to help someone in need."</p>
+        <div class="author">– Sita, Donor</div>
+      </div>
+      <div class="testimonial">
+        <p>"HBB helped my family when we needed blood urgently. Thank you for your service!"</p>
+        <div class="author">– Ram, Recipient</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hamro Blood Bank. All rights reserved.</p>
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a> |
+      <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('darkmode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleButton.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+    });
+  </script>
+</body>
+</html>
