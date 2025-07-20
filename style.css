@@ -277,30 +277,6 @@
       }
     }
 
-    /* Testimonials */
-    .testimonials {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .testimonial {
-      background-color: var(--bg-color);
-      padding: 1rem;
-      border-left: 4px solid var(--accent-color);
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    .testimonial p {
-      margin: 0 0 0.5rem 0;
-    }
-
-    .testimonial .author {
-      font-weight: bold;
-      color: var(--accent-color);
-    }
 
     /* Footer */
     .footer {
@@ -330,8 +306,6 @@
   /* box-shadow: 0 0 15px rgba(198, 40, 40, 0.7); */
   overflow: hidden;
 }
-
-/* Overlay for readability */
 #signup-form::before {
   content: "";
   position: absolute;
@@ -346,14 +320,14 @@
   z-index: 1;
 }
 
-/* Heading */
+
 #signup-form h2 {
   text-align: center;
   color: #b30000;
   margin-bottom: 20px;
 }
 
-/* Each form group */
+
 #signup-form .form-group {
   margin-bottom: 18px;
 }
@@ -365,7 +339,6 @@
   font-weight: bold;
 }
 
-/* Inputs and selects */
 #signup-form input[type="text"],
 #signup-form input[type="email"],
 #signup-form input[type="tel"],
@@ -389,7 +362,6 @@
   border-color: #df6262;
 }
 
-/* Inline radio options */
 #signup-form .form-group input[type="radio"] {
   margin-right: 6px;
 }
@@ -399,7 +371,6 @@
   vertical-align: middle;
 }
 
-/* Horizontal radios in one line */
 #signup-form .form-group label {
   display: inline-block;
   margin-right: 20px;
@@ -432,3 +403,48 @@
 #signup-form button[type="reset"]:hover {
   background-color: #800000;
 }
+/* MISSION*/
+    .mission-content h2 {
+      color: #d32f2f;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .mission-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+.mission-content {
+        margin: 40px auto;
+      padding: 30px;
+    }
+    /*Testomonial CSS*/
+    .testimonial-container {
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .testimonial-container h2 {
+      text-align: center;
+      color: #d32f2f;
+      margin-bottom: 30px;
+    }
+
+    .testimonial {
+      margin-bottom: 30px;
+      border-left: 4px solid #d32f2f;
+      padding-left: 20px;
+    }
+
+    .testimonial p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #555;
+    }
